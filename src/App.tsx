@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from 'react'
 import { courseContext } from './context/CourseContext'
 import ActionBar from './components/ActionBar'
+import TitleBar from './components/TitleBar'
 
 const data = [
   {
@@ -68,7 +69,8 @@ const App = () => {
   }
 
   return (
-    <div>
+    <div className='h-screen'>
+      <TitleBar />
       <ActionBar />
     </div>
   )
