@@ -1,14 +1,15 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 
 interface DividerProps {
-    direction: "vertical" | "horizontal";
-  }
+    direction: "vertical" | "horizontal"
+    className?: string
+}
 
-const Divider = (direction: DividerProps) => {
+const Divider = (props: DividerProps) => {
   return (
-    direction.direction === "vertical"
-        ? (<div className="w-[2px] bg-gray-700 mx-4"></div>)
-        : (<div className="h-[2px] bg-gray-700"></div>)
+    props.direction === "vertical"
+        ? (<div className={`w-[2px] bg-gray-700 mx-4 + ${props.className}`}></div>)
+        : (<div className={`h-[2px] bg-gray-700 my-4" + ${props.className}`}></div>)
   )
 }
 

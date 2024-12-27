@@ -7,9 +7,9 @@ import Divider from './components/Divider'
 
 const App = () => {
   return (
-    <div className='h-full w-full bg-black'>
+    <div className='h-screen w-full bg-black'>
       <TitleBar />
-      <Divider direction="horizontal"/>
+      <Divider direction="horizontal" />
 
       <div className='flex w-full'>
         <ActionBar />

@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { courseContext } from '../context/CourseContext'
 import Course from '../model/Course'
+import Divider from './Divider'
 
 const ActionBar = () => {
 
@@ -89,12 +90,13 @@ const ActionBar = () => {
 
             </div>
 
-            <hr className='m-5'></hr>
+            <Divider 
+                direction='horizontal'  
+                className='mt-5'
+            />
 
             <div className='mt-5'>
-                <h2 className='text-center'>Your courses</h2>
-                
-                <div className='h-56 overflow-y-scroll grid grid-cols-2 gap-4 p-5 border rounded-xl'>
+                <div className='h-56 overflow-y-scroll grid grid-cols-2 gap-4 p-5 border border-gray-700 rounded-xl'>
                     {courses.map((course, index) => (
                         <div key={index} className='w-auto h-full border rounded-xl text-center flex items-center justify-center p-2
                             bg-white text-black
@@ -104,8 +106,6 @@ const ActionBar = () => {
                     ))}
                 </div>
             </div>
-
-            <hr className='m-5'></hr>
 
             <div className='flex justify-center mt-5'>
                 <button
