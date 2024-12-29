@@ -33,7 +33,7 @@ const CourseContextProvider: React.FC<courseProviderProps> = (props) => {
         console.log("Get Ordering")
         console.log(courses.length)
 
-        const response = await fetch("http://localhost:8080/api/getOrdering", {
+        const response = await fetch("https://prerequisite-course-identifier-backend.onrender.com/api/getOrdering", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

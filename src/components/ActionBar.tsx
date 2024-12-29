@@ -11,7 +11,7 @@ const ActionBar = () => {
     const [prerequisiteID, setPrerequisiteID] = useState(0)
 
     const getOrderingHandler = async () => {
-        getOrdering()
+        await getOrdering()
 
         setCourseID(0);
         setCourseTitle("");

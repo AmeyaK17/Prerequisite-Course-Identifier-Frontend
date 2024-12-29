@@ -6,7 +6,7 @@ const OrderedCourses = () => {
     const {courses} = useContext(courseContext)
     
     const getOrdering = async () => {
-        const response = await fetch("http://localhost:8080/api/getOrdering", {
+        const response = await fetch("https://prerequisite-course-identifier-backend.onrender.com/api/getOrdering", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
